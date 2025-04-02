@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amos Congdon</title>
+    <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+    <link href="ivoryton_style.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body {
+            background-color: #333333;
+            font-family: Vijaya;
+            font-size: 8ex;
+            font-style: normal;
+            font-weight: bold;
+            color: #FF8400;
+            text-align: center;
+        }
+
+        h1,
+        h2 {
+            font-family: "Baskerville Old Face";
+            color: #FF8400;
+        }
+
+        #gallery-container {
+            position: relative;
+            width: 80%;
+            margin: 30px auto;
+            border: 4px solid #FF8400;
+            overflow: hidden;
+            padding: 20px;
+            aspect-ratio: 16 / 9;
+            background-color: #000;
+        }
+
+        #gallery {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+        }
+
+        .gallery-image {
+            min-width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: #111;
+            border: 2px solid #FF8400;
+            box-sizing: border-box;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 48px;
+            font-weight: bold;
+            color: #FF8400;
+            background: rgba(51, 51, 51, 0.5);
+            cursor: pointer;
+            z-index: 10;
+            padding: 10px;
+        }
+
+        #left-arrow {
+            left: 10px;
+        }
+
+        #right-arrow {
+            right: 10px;
+        }
+
+        #video-section {
+            margin: 50px auto;
+            width: 80%;
+            border: 4px solid #FF8400;
+            padding: 20px;
+            aspect-ratio: 16 / 9;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #extra-text {
+            margin-top: 50px;
+        }
+
+        .home-button {
+            margin-top: 30px;
+        }
+
+        .home-button a {
+            font-family: "Baskerville Old Face";
+            color: #FF8400;
+            font-size: 24px;
+            text-decoration: none;
+            border: 2px solid #FF8400;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Amos Congdon</p>
+    <hr />
+    <div class="home-button">
+        <a href="index.html">&larr; Home</a>
+    </div>
+    <div id="gallery-container">
+        <div id="left-arrow" class="arrow">&lt;</div>
+        <div id="gallery">
+            <img src="assets/image1.jpg" class="gallery-image" alt="Image 1" />
+            <img src="assets/image2.jpg" class="gallery-image" alt="Image 2" />
+            <img src="assets/image3.jpg" class="gallery-image" alt="Image 3" />
+            <img src="assets/image4.jpg" class="gallery-image" alt="Image 4" />
+            <img src="assets/image5.jpg" class="gallery-image" alt="Image 5" />
+            <img src="assets/image6.jpg" class="gallery-image" alt="Image 6" />
+            <img src="assets/image7.jpg" class="gallery-image" alt="Image 7" />
+            <img src="assets/image8.jpg" class="gallery-image" alt="Image 8" />
+            <img src="assets/image9.jpg" class="gallery-image" alt="Image 9" />
+            <img src="assets/image10.jpg" class="gallery-image" alt="Image 10" />
+            <img src="assets/image11.jpg" class="gallery-image" alt="Image 11" />
+        </div>
+        <div id="right-arrow" class="arrow">&gt;</div>
+    </div>
+
+    <div id="video-section">
+        <video autoplay loop muted playsinline>
+            <source src="assets/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div id="extra-text">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <hr />
+    <h2 align="center">Designed and Developed by RAHSystems Inc.<br />All content © 2006 The Ivoryton Studio All Rights Reserved</h2>
+
+    <script type="text/javascript">
+        let currentIndex = 0;
+        const gallery = document.getElementById("gallery");
+        const images = document.querySelectorAll(".gallery-image");
+        const totalImages = images.length;
+        let interval = setInterval(nextImage, 6000);
+
+        function updateGallery() {
+            gallery.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateGallery();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateGallery();
+        }
+
+        function resetTimer() {
+            clearInterval(interval);
+            interval = setInterval(nextImage, 6000);
+        }
+
+        document.getElementById("left-arrow").addEventListener("click", function () {
+            prevImage();
+            resetTimer();
+        });
+
+        document.getElementById("right-arrow").addEventListener("click", function () {
+            nextImage();
+            resetTimer();
+        });
+    </script>
+</body>
+
+</html>

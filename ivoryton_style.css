@@ -1,15 +1,35 @@
 @charset "utf-8";
 
+a {
+    color: #FF8400;
+}
+
 a:active {
-    color: #FF2400;
+    color: #FF8400;
 }
 
 a:visited {
-    color: #FF261D;
+    color: #FF8400;
 }
 
 a:link {
-    color: #FF261D;
+    color: #FF8400;
+}
+
+ul.MenuBarHorizontal a {
+    color: #FF8400;
+}
+
+ul.MenuBarHorizontal a:active {
+    color: #FF8400;
+}
+
+ul.MenuBarHorizontal a:visited {
+    color: #FF8400;
+}
+
+ul.MenuBarHorizontal a:link {
+    color: #FF8400;
 }
 
 .list_headings {
@@ -17,7 +37,7 @@ a:link {
     font-size: 12px;
     font-style: normal;
     font-weight: bold;
-    color: #F00;
+    color: #FF8400;
 }
 
 body {
@@ -26,32 +46,32 @@ body {
     font-size: 8ex;
     font-style: normal;
     font-weight: bold;
-    color: #F00;
+    color: #FF8400;
     text-align: center;
 }
 
 h1 {
     font-family: "Baskerville Old Face";
     font-size: 36px;
-    color: #FF2400;
+    color: #FF8400;
 }
 
 h3 {
     font-family: "Baskerville Old Face";
     font-size: 18px;
-    color: #F00;
+    color: #FF8400;
 }
 
 h2 {
     font-size: 16px;
-    color: #FF0000;
+    color: #FF8400;
     font-family: "Baskerville Old Face";
 }
 
 p {
     font-family: "Baskerville Old Face";
     font-size: 40pt;
-    color: #FF2400;
+    color: #FF8400;
     font-style: italic;
 }
 
