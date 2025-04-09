@@ -1,84 +1,97 @@
 @charset "utf-8";
 
+/* Target ALL links */
 a {
     color: #FF8400;
+    text-decoration: none;
 }
 
-a:active {
-    color: #FF8400;
-}
-
-a:visited {
-    color: #FF8400;
-}
-
+/* Override for specific link states */
+a:active,
+a:visited,
 a:link {
     color: #FF8400;
 }
 
-ul.MenuBarHorizontal a {
-    color: #FF8400;
-}
-
-ul.MenuBarHorizontal a:active {
-    color: #FF8400;
-}
-
-ul.MenuBarHorizontal a:visited {
-    color: #FF8400;
-}
-
+/* Target links WITHIN the MenuBarHorizontal */
+ul.MenuBarHorizontal a,
+ul.MenuBarHorizontal a:active,
+ul.MenuBarHorizontal a:visited,
 ul.MenuBarHorizontal a:link {
     color: #FF8400;
 }
 
+/* List headings */
 .list_headings {
-    font-family: Vijaya;
+    font-family: Arial, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: bold;
     color: #FF8400;
 }
 
+/* Page base styles */
 body {
     background-color: #333333;
-    font-family: Vijaya;
+    font-family: Arial, sans-serif;
     font-size: 8ex;
     font-style: normal;
     font-weight: bold;
-    color: #FF8400;
+    color: #FFFFFF;
     text-align: center;
 }
 
-h1 {
-    font-family: "Baskerville Old Face";
-    font-size: 36px;
-    color: #FF8400;
+/* Headings */
+h1,
+h2,
+h3 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
 }
 
-h3 {
-    font-family: "Baskerville Old Face";
-    font-size: 18px;
-    color: #FF8400;
+h1 {
+    font-size: 36px;
 }
 
 h2 {
     font-size: 16px;
-    color: #FF8400;
-    font-family: "Baskerville Old Face";
 }
 
+h3 {
+    font-size: 18px;
+}
+
+/* Paragraphs */
 p {
-    font-family: "Baskerville Old Face";
+    font-family: Arial, sans-serif;
     font-size: 40pt;
-    color: #FF8400;
+    color: #FFFFFF;
     font-style: italic;
+    font-weight: bold;
 }
 
+/* Image float helpers */
 .img_right_float {
     float: right;
 }
 
 .img_left_float {
     float: left;
+}
+
+/* Contact section */
+.contact-wrapper {
+    width: 100%;
+    margin-top: 100px;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.contact-info {
+    color: #FFFFFF;
+    font-size: 36pt;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    white-space: pre-line;
 }

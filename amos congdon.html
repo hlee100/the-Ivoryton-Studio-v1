@@ -1,26 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Amos Congdon</title>
     <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
     <link href="ivoryton_style.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         body {
             background-color: #333333;
-            font-family: Vijaya;
+            font-family: Arial, sans-serif;
             font-size: 8ex;
-            font-style: normal;
             font-weight: bold;
-            color: #FF8400;
+            color: #FFFFFF;
             text-align: center;
+            position: relative;
         }
 
-        h1,
-        h2 {
-            font-family: "Baskerville Old Face";
-            color: #FF8400;
+        h1, h2, h3, p, .intro-paragraph, .middle-text, .video-caption, #extra-text {
+            color: #FFFFFF !important;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+        }
+
+        h1, h2 {
+            font-size: 48pt;
+        }
+
+        p {
+            font-size: 40pt;
+            font-style: italic;
         }
 
         #gallery-container {
@@ -84,8 +94,17 @@
             object-fit: cover;
         }
 
-        #extra-text {
+        .intro-paragraph, .middle-text, .video-caption, #extra-text {
             margin-top: 50px;
+            font-size: 36pt;
+            font-family: Arial, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            padding: 0 10%;
+        }
+
+        .middle-text p {
+            margin-bottom: 20px;
         }
 
         .home-button {
@@ -93,32 +112,44 @@
         }
 
         .home-button a {
-            font-family: "Baskerville Old Face";
-            color: #FF8400;
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
             font-size: 24px;
             text-decoration: none;
             border: 2px solid #FF8400;
             padding: 10px 20px;
             display: inline-block;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            position: absolute;
+            bottom: 20px;
+            left: 40px;
+            color: #FFFFFF;
+            font-size: 36pt;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            white-space: pre-line;
+            text-align: left;
         }
     </style>
 </head>
-
 <body>
     <p>Amos Congdon</p>
-    <hr />
     <div class="home-button">
         <a href="index.html">&larr; Home</a>
     </div>
+
+    <div class="intro-paragraph">
+        Amos believed man’s purpose is to harvest the earth. At the end of his life, he held to the idea that a nurturing relationship with the earth is God’s will for man.
+    </div>
+
     <div id="gallery-container">
         <div id="left-arrow" class="arrow">&lt;</div>
         <div id="gallery">
             <img src="assets/image1.jpg" class="gallery-image" alt="Image 1" />
             <img src="assets/image2.jpg" class="gallery-image" alt="Image 2" />
-            <img src="assets/image3.jpg" class="gallery-image" alt="Image 3" />
-            <img src="assets/image4.jpg" class="gallery-image" alt="Image 4" />
-            <img src="assets/image5.jpg" class="gallery-image" alt="Image 5" />
-            <img src="assets/image6.jpg" class="gallery-image" alt="Image 6" />
             <img src="assets/image7.jpg" class="gallery-image" alt="Image 7" />
             <img src="assets/image8.jpg" class="gallery-image" alt="Image 8" />
             <img src="assets/image9.jpg" class="gallery-image" alt="Image 9" />
@@ -128,20 +159,34 @@
         <div id="right-arrow" class="arrow">&gt;</div>
     </div>
 
+    <div class="middle-text">
+        <p>But for all his heavy thoughts he’d be the first to see the joke and laugh. Tell fond memories of school in the Pleasant Valley with the parsonage on one side and the library on the other. The sound of the racing river out back.</p>
+        <p>How sweet the wild grapes were then, when the fox runs traced the land, the stone where the hunter sat.</p>
+    </div>
+
     <div id="video-section">
-        <video autoplay loop muted playsinline>
+        <video controls muted playsinline>
             <source src="assets/video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 
-    <div id="extra-text">
-        <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="video-caption">
+        The Congdon saw mill has been a sanctuary for me. It has allowed me to go back in time “as best as can be done" and connected me to a rural American spirit of which I wanted to be a part.
     </div>
 
-    <hr />
-    <h2 align="center">Designed and Developed by RAHSystems Inc.<br />All content © 2006 The Ivoryton Studio All Rights Reserved</h2>
+    <!-- Extra invisible spacers -->
+    <div style="height: 200px;"></div>
+    <div style="height: 200px;"></div>
+
+    <!-- Final contact section -->
+    <div class="contact-wrapper">
+        <div class="contact-info">
+            Thank you Tony Donovan<br />
+            860 767 0344<br />
+            ivorytonstudio@gmail.com
+        </div>
+    </div>
 
     <script type="text/javascript">
         let currentIndex = 0;
@@ -180,5 +225,5 @@
         });
     </script>
 </body>
-
 </html>
+
